@@ -9,7 +9,7 @@ from rest_framework.permissions import IsAuthenticatedOrReadOnly
 class BookView(viewsets.ModelViewSet):
     queryset=Book.objects.all()
     serializer_class=BookSerializer
-    # authentication_classes=[BasicAuthentication]
-    # permission_classes=[IsAuthenticatedOrReadOnly]
+    authentication_classes=[BasicAuthentication]
+    permission_classes=[IsAuthenticatedOrReadOnly]
 
     
